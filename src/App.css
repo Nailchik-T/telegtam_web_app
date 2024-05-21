@@ -1,10 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	height: 85dvh;
+}
 body {
-  background: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+	background: #f8f8f8;
+	color: var(--tg-theme-text-color);
+	height: 100svh;
+	font-family: 'Mulish', sans-serif;
+	font-optical-sizing: auto;
 }
