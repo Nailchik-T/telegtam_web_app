@@ -1,3 +1,9 @@
+import ProductList from '../../components/ProductList/ProductList'
+
 export const Catalog = () => {
-	return <>catalog</>
+	return (
+		<>
+			<ProductList />
+		</>
+	)
 }

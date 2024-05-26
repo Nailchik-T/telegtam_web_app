@@ -4,6 +4,7 @@ import './App.css'
 import CustomLayout from './components/CustomLayout/CustomLayout'
 import Header from './components/Header/Header'
 import { useTelegram } from './hooks/useTelegram'
+import Basket from './pages/basket/Basket'
 import { Catalog } from './pages/catalog/Catalog'
 import Home from './pages/home/Home'
 
@@ -21,6 +22,7 @@ function App() {
 				<Route index element={<Home />} />
 				<Route element={<CustomLayout />}>
 					<Route path='/catalog' element={<Catalog />} />
+					<Route path='/basket' element={<Basket />} />
 				</Route>
 			</Routes>
 		</div>

@@ -1,32 +1,60 @@
-import { Link } from 'react-router-dom'
-import basket from '../../assets/basket.svg'
-import catalog from '../../assets/catalog.svg'
-import favorites from '../../assets/favorite.svg'
-import home from '../../assets/home.svg'
+import { AiFillAppstore } from 'react-icons/ai'
+import { IoMdHome } from 'react-icons/io'
+import { MdFavorite, MdShoppingCart } from 'react-icons/md'
+import { Link, useLocation } from 'react-router-dom'
+
 import './FooterNav.css'
 
 const FooterNav = () => {
+	const location = useLocation()
+
+	const isActive = path => location.pathname === path
+
 	return (
 		<nav className='footer-nav'>
 			<ul>
 				<li>
 					<Link to={'/'}>
-						<img className='w-7' src={home} alt='home' />
+						<IoMdHome
+							className={
+								isActive('/')
+									? 'text-3xl text-primary'
+									: 'text-3xl text-secondary'
+							}
+						/>
 					</Link>
 				</li>
 				<li>
-					<Link to={'/'}>
-						<img className='w-7 texy-' src={catalog} alt='catalog' />
+					<Link to={'/catalog'}>
+						<AiFillAppstore
+							className={
+								isActive('/catalog')
+									? 'text-4xl text-primary'
+									: 'text-3xl text-secondary'
+							}
+						/>
 					</Link>
 				</li>
 				<li>
 					<Link to={'/favorites'}>
-						<img className='w-7' src={favorites} alt='favorites' />
+						<MdFavorite
+							className={
+								isActive('/favorites')
+									? 'text-4xl text-primary'
+									: 'text-3xl text-secondary'
+							}
+						/>
 					</Link>
 				</li>
 				<li>
 					<Link to={'/basket'}>
-						<img className='w-7' src={basket} alt='favorites' />
+						<MdShoppingCart
+							className={
+								isActive('/basket')
+									? 'text-4xl text-primary'
+									: 'text-3xl text-secondary'
+							}
+						/>{' '}
 					</Link>
 				</li>
 			</ul>

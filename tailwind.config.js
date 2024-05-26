@@ -2,7 +2,15 @@
 module.exports = {
 	content: ['./src/**/*.{html,jsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			boxShadow: {
+				custom: '0 20px 35px 0 rgba(0, 0, 0, 0.05)',
+			},
+			colors: {
+				secondary: '#EEF1F4',
+				primary: '#667080',
+			},
+		},
 	},
 	plugins: [],
 }
