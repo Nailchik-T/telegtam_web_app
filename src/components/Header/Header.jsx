@@ -10,7 +10,7 @@ const Header = () => {
 	return (
 		<div className={'header bg-bg'}>
 			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
-			<MdAccountCircle className='username text-3xl' />
+			<MdAccountCircle className='username text-3xl text-primary' />
 		</div>
 	)
 }

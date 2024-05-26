@@ -1,4 +1,4 @@
-import imgs from '../../assets/logo.png'
+import imgs from '../../assets/Icons.png'
 
 const ProductCard = () => {
 	return (
@@ -13,7 +13,7 @@ const ProductCard = () => {
 				</div>
 
 				<div className='flex flex-col'>
-					<p className=' text-lg font-bold'>$239.80</p>
+					<p className=' text-sm font-bold mt-2'>12 500 ₸ </p>
 					<h2 className=' font-extralight '>Nike Air Max 90</h2>
 				</div>
 			</div>
