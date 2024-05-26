@@ -12,11 +12,6 @@ export function useTelegram() {
 			tg.MainButton.show()
 		}
 	}
-	const useGetUserImage = () => {
-		tg.storage.get('me').then(me => {
-			return me.photo.small
-		})
-	}
 
 	return {
 		onClose,
