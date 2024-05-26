@@ -1,5 +1,4 @@
 import icon from '../../assets/logo.png'
-
 const BasketCard = () => {
 	return (
 		<>
