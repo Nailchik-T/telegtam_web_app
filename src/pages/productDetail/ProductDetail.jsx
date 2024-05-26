@@ -1,4 +1,4 @@
-import icon from '../../assets/Icons.png'
+import icon from '../../assets/logo.png'
 import Button from '../../components/Button/Button'
 
 const ProductDetail = () => {
@@ -31,7 +31,7 @@ const ProductDetail = () => {
 			<div className='fixed flex w-full bottom-0 justify-between p-7 m-t items-center text-white bg-primary rounded-t-3xl'>
 				<div className='flex flex-col'>
 					<p className='font-extralight'>Цена</p>
-					<p className='font-bold'>12 500 ₸</p>
+					<p className='font-bold'>75 500 ₸</p>
 				</div>
 				<div>
 					<Button className=' font-bold rounded-2xl px-10 py-4 bg-primaryDep text-white hover:bg-slate-800'>

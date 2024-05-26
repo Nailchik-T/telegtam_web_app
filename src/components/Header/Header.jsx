@@ -14,7 +14,10 @@ const Header = () => {
 	}
 	return (
 		<div className={'header'}>
-			<FaChevronLeft onClick={handleClick} className='text-2xl text-primary' />
+			<FaChevronLeft
+				onClick={handleClick}
+				className='text-2xl text-primary cursor-pointer'
+			/>
 			<MdAccountCircle className='username text-3xl text-primary' />
 		</div>
 	)

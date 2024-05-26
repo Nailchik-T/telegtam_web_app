@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { FaAlignLeft } from 'react-icons/fa6'
 import { useTelegram } from '../../hooks/useTelegram'
 import ProductCard from '../ProductCard/ProductCard'
+
 import './ProductList.css'
 
 const products = [
@@ -109,23 +111,29 @@ const ProductList = () => {
 	}
 
 	return (
-		<div className={'list gap-5'}>
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			{/* {products.map(item => (
+		<>
+			<div className='flex justify-between p-5'>
+				<h3 className='font-bold text-xl'>Популярные</h3>
+				<FaAlignLeft className='text-2xl text-primary' />
+			</div>
+			<div className={'list gap-5'}>
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				<ProductCard />
+				{/* {products.map(item => (
                 <ProductItem
                     product={item}
                     onAdd={onAdd}
                     className={'item'}
                 />
             ))} */}
-		</div>
+			</div>
+		</>
 	)
 }
 

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import imgs from '../../assets/Icons.png'
+import imgs from '../../assets/logo.png'
 
 const ProductCard = () => {
 	const navigate = useNavigate()
@@ -19,7 +19,7 @@ const ProductCard = () => {
 				</div>
 
 				<div className='flex flex-col'>
-					<p className=' text-sm font-bold mt-2'>12 500 ₸ </p>
+					<p className=' text-sm font-bold mt-2'>75 500 ₸ </p>
 					<h2 className=' font-extralight '>Nike Air Max 90</h2>
 				</div>
 			</div>
