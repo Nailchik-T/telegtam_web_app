@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/logo.jpg'
 import Button from '../../components/Button/Button'
 import './home.css'
 export const Home = () => {
@@ -9,8 +8,7 @@ export const Home = () => {
 	}
 	return (
 		<>
-			<div className='flex flex-col container justify-end items-center gap-2'>
-				<img src={logo} alt='logo' />
+			<div className='flex flex-col container justify-center items-center gap-2'>
 				<h1 className='font-bold text-center text-2xl'>
 					Добро пожаловать в наш интернет-магазин
 				</h1>

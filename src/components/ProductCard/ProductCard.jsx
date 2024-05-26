@@ -1,14 +1,14 @@
-import imgs from '../../assets/logo.jpg'
+import imgs from '../../assets/logo.png'
 
 const ProductCard = () => {
 	return (
 		<>
 			<div className='select-none'>
-				<div class=' shadow-custom flex justify-center items-center rounded-2xl h-40 w-40 bg-white'>
+				<div class='p-5 shadow-custom flex justify-center items-center rounded-2xl h-40 w-40 bg-white'>
 					<img
 						src={imgs}
 						alt='Centered Image'
-						className='max-w-full max-h-full  '
+						className=' max-w-full max-h-full  '
 					/>
 				</div>
 
