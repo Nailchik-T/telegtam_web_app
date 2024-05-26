@@ -118,7 +118,6 @@ const ProductList = () => {
 			<ProductCard />
 			<ProductCard />
 			<ProductCard />
-			<ProductCard />
 			{/* {products.map(item => (
                 <ProductItem
                     product={item}

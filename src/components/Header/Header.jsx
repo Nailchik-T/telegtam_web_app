@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaAngleLeft } from 'react-icons/fa'
-
+import { MdAccountCircle } from 'react-icons/md'
 import { useTelegram } from '../../hooks/useTelegram'
 import './Header.css'
 
@@ -8,9 +8,9 @@ const Header = () => {
 	const { user, onClose } = useTelegram()
 	console.log(user?.photo_url)
 	return (
-		<div className={'header'}>
+		<div className={'header bg-bg'}>
 			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
-			<img className='username w-5 h-5' src={user?.photo_url} alt='me' />
+			<MdAccountCircle className='username text-3xl' />
 		</div>
 	)
 }
