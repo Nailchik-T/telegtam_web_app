@@ -6,11 +6,11 @@ import './Header.css'
 
 const Header = () => {
 	const { user, onClose } = useTelegram()
-
+	console.log(user?.photo_url)
 	return (
 		<div className={'header'}>
 			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
-			<img className='username w-5 h-5' src={user.photo_url} alt='me' />
+			<img className='username w-5 h-5' src={user?.photo_url} alt='me' />
 		</div>
 	)
 }
