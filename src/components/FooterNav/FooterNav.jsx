@@ -29,18 +29,18 @@ const FooterNav = () => {
 						<AiFillAppstore
 							className={
 								isActive('/catalog')
-									? 'text-4xl text-primary'
+									? 'text-3xl text-primary'
 									: 'text-3xl text-secondary'
 							}
 						/>
 					</Link>
 				</li>
 				<li>
-					<Link to={'/favorites'}>
+					<Link to={'/favorite'}>
 						<MdFavorite
 							className={
-								isActive('/favorites')
-									? 'text-4xl text-primary'
+								isActive('/favorite')
+									? 'text-3xl text-primary'
 									: 'text-3xl text-secondary'
 							}
 						/>
@@ -51,7 +51,7 @@ const FooterNav = () => {
 						<MdShoppingCart
 							className={
 								isActive('/basket')
-									? 'text-4xl text-primary'
+									? 'text-3xl text-primary'
 									: 'text-3xl text-secondary'
 							}
 						/>{' '}

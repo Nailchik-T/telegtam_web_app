@@ -1,3 +1,4 @@
+import { MdFavorite } from 'react-icons/md'
 import icon from '../../assets/logo.png'
 import Button from '../../components/Button/Button'
 
@@ -8,6 +9,7 @@ const ProductDetail = () => {
 				style={{ borderRadius: 50 }}
 				className='flex flex-col items-center  bg-white mt-24'
 			>
+				<MdFavorite className='text-2xl text-gray-400 z-20 absolute top-28 right-14' />
 				<div className=' absolute top-24 p-5 shadow-custom flex justify-center items-center rounded-2xl w-80 h-80 bg-secondary '>
 					<img
 						src={icon}
@@ -15,6 +17,7 @@ const ProductDetail = () => {
 						className=' max-w-full max-h-full  '
 					/>
 				</div>
+
 				<div className='relative mt-64 px-6 mb-32'>
 					<div className='font-bold text-2xl'>LOREM IPSUM</div>
 					<div className='mt-2 text-sm font-bold text-primary'>
