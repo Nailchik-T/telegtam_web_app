@@ -8,7 +8,7 @@ const Header = () => {
 	const { user, onClose } = useTelegram()
 	console.log(user?.photo_url)
 	return (
-		<div className={'header bg-bg'}>
+		<div className={'header'}>
 			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
 			<MdAccountCircle className='username text-3xl text-primary' />
 		</div>

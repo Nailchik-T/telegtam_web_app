@@ -7,6 +7,7 @@ import { useTelegram } from './hooks/useTelegram'
 import Basket from './pages/basket/Basket'
 import { Catalog } from './pages/catalog/Catalog'
 import Home from './pages/home/Home'
+import ProductDetail from './pages/productDetail/ProductDetail'
 
 function App() {
 	const { onToggleButton, tg } = useTelegram()
@@ -24,6 +25,7 @@ function App() {
 					<Route path='/catalog' element={<Catalog />} />
 					<Route path='/basket' element={<Basket />} />
 				</Route>
+				<Route path='/product/:id' element={<ProductDetail />} />
 			</Routes>
 		</div>
 	)
