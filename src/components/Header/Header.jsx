@@ -1,15 +1,20 @@
 import React from 'react'
-import { FaAngleLeft } from 'react-icons/fa'
+import { FaChevronLeft } from 'react-icons/fa6'
 import { MdAccountCircle } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 import { useTelegram } from '../../hooks/useTelegram'
 import './Header.css'
 
 const Header = () => {
 	const { user, onClose } = useTelegram()
-	console.log(user?.photo_url)
+	const navigate = useNavigate()
+	const isActive = path => location.pathname === path
+	const handleClick = () => {
+		isActive ? navigate('/catalog') : onClose()
+	}
 	return (
 		<div className={'header'}>
-			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
+			<FaChevronLeft onClick={handleClick} className='text-2xl text-primary' />
 			<MdAccountCircle className='username text-3xl text-primary' />
 		</div>
 	)
