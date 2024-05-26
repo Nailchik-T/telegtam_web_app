@@ -5,12 +5,12 @@ import { useTelegram } from '../../hooks/useTelegram'
 import './Header.css'
 
 const Header = () => {
-	const { user, onClose } = useTelegram()
+	const { user, onClose, useGetUserImage } = useTelegram()
 
 	return (
 		<div className={'header'}>
 			<FaAngleLeft onClick={onClose} className='text-3xl text-primary' />
-			<span className={'username'}>{user?.username}</span>
+			<img className='username w-5 h-5' src={useGetUserImage()} alt='me' />
 		</div>
 	)
 }
