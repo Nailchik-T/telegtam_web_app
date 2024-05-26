@@ -15,7 +15,6 @@ export function useTelegram() {
 
 	return {
 		onClose,
-		useGetUserImage,
 		onToggleButton,
 		tg,
 		user: tg.initDataUnsafe?.user,
