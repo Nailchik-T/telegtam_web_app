@@ -1,5 +1,6 @@
 import icon from '../../assets/logo.png'
-const BasketCard = () => {
+
+const BasketCard = ({ product, countItems, removeFromBasket, addToCart }) => {
 	return (
 		<>
 			<div className='flex bg-white p-4 rounded-2xl justify-between items-center'>
@@ -8,16 +9,26 @@ const BasketCard = () => {
 						<img className='max-w-full max-h-full' src={icon} alt='' />
 					</div>
 					<div>
-						<h2 className='text-lg font-bold'>Lorem</h2>
-						<p className='text-sm text-primary font-extralight'>75 500 ₸</p>
+						<h2 className='text-lg font-bold'>{product.name}</h2>
+						<p className='text-sm text-primary font-extralight'>
+							{product.price.toLocaleString()} ₸
+						</p>
 					</div>
 				</div>
 				<div className='flex items-center gap-3'>
-					<p className='text-primaryDep bg-secondary text-2xl w-8 h-9 rounded-lg text-center'>
+					<p
+						onClick={() => removeFromBasket(product.id)}
+						className='text-primaryDep bg-secondary text-2xl w-8 h-9 rounded-lg text-center'
+					>
 						-
 					</p>
-					<p className='text-primary font-bold text-lg'>1</p>
-					<p className='text-primaryDep bg-secondary text-2xl  w-8 h-9 rounded-lg text-center font-bold'>
+					<p className='text-primary font-bold text-lg'>
+						{countItems(product.id)}
+					</p>
+					<p
+						onClick={() => addToCart(product)}
+						className='text-primaryDep bg-secondary text-2xl  w-8 h-9 rounded-lg text-center font-bold'
+					>
 						+
 					</p>
 				</div>

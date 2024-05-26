@@ -1,8 +1,31 @@
+import { message } from 'antd'
+import { useState } from 'react'
 import { MdFavorite } from 'react-icons/md'
 import icon from '../../assets/logo.png'
 import Button from '../../components/Button/Button'
 
 const ProductDetail = () => {
+	const product = {
+		id: 1,
+		name: 'Nike Air Max 90',
+		price: '35000',
+		category: 'Мужские кеды',
+		description:
+			'Мужские кеды из натуральной кожи ECCO STREET LITE M передают настоящую гармонию стиля и практичности. За лаконичным дизайном скрываются передовые технологии комфорта для максимальной свободы движения.',
+	}
+
+	const [cart, setCart] = useState(() => {
+		const savedCart = localStorage.getItem('cart')
+		return savedCart ? JSON.parse(savedCart) : []
+	})
+
+	const addToCart = () => {
+		message.success('Товар добавлен в корзину.')
+		const updatedCart = [...cart, product]
+		setCart(updatedCart)
+		localStorage.setItem('cart', JSON.stringify(updatedCart))
+	}
+
 	return (
 		<div className='flex flex-col' style={{}}>
 			<div
@@ -19,26 +42,26 @@ const ProductDetail = () => {
 				</div>
 
 				<div className='relative mt-64 px-6 mb-32'>
-					<div className='font-bold text-2xl'>LOREM IPSUM</div>
+					<div className='font-bold text-2xl'> {product.name}</div>
 					<div className='mt-2 text-sm font-bold text-primary'>
-						Мужские кеды
+						{product.category}
 					</div>
 					<p className='text-sm font-light mt-2 text-primary  w-full mb-5  '>
-						Мужские кеды из натуральной кожи ECCO STREET LITE M передают
-						настоящую гармонию стиля и практичности. За лаконичным дизайном
-						скрываются передовые технологии комфорта для максимальной свободы
-						движения.
+						{product.description}
 					</p>
 				</div>
 			</div>
 			<div className='fixed flex w-full bottom-0 justify-between p-7 m-t items-center text-white bg-primary rounded-t-3xl'>
 				<div className='flex flex-col'>
-					<p className='font-extralight'>Цена</p>
-					<p className='font-bold'>75 500 ₸</p>
+					<p className='font-extralight'>{product.name}</p>
+					<p className='font-bold'>{product.price.toLocaleString()}</p>
 				</div>
 				<div>
-					<Button className=' font-bold rounded-2xl px-10 py-4 bg-primaryDep text-white hover:bg-slate-800'>
-						Добавить в корзину
+					<Button
+						onClick={addToCart}
+						className=' font-bold rounded-2xl px-10 py-4 bg-primaryDep  text-sm text-white hover:bg-slate-800'
+					>
+						В корзину
 					</Button>
 				</div>
 			</div>
