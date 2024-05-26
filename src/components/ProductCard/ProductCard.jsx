@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import imgs from '../../assets/Icons.png'
 
 const ProductCard = () => {
+	const navigate = useNavigate()
+
+	const onClick = () => {
+		navigate('/product/1')
+	}
 	return (
 		<>
-			<div className='select-none'>
+			<div onClick={onClick} className='select-none'>
 				<div class='p-5 shadow-custom flex justify-center items-center rounded-2xl h-40 w-40 bg-white'>
 					<img
 						src={imgs}

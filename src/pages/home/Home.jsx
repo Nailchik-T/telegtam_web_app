@@ -16,7 +16,10 @@ export const Home = () => {
 					Присоединяйтесь к нам в Telegram и откройте для себя лучшие
 					предложения и уникальные товары.
 				</p>
-				<Button onClick={onClick} className='w-56 text-white rounded-full'>
+				<Button
+					onClick={onClick}
+					className='w-56 text-white rounded-full bg-primary px-15 py-3'
+				>
 					Перейти к покупкам
 				</Button>
 			</div>
