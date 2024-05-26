@@ -1,8 +1,14 @@
+import BasketCard from '../../components/BasketCard/BasketCard'
+
 const Basket = () => {
 	return (
-		<>
-			<div>basket</div>
-		</>
+		<div className='p-5'>
+			<div className='flex flex-col gap-5'>
+				<BasketCard />
+				<BasketCard />
+				<BasketCard />
+			</div>
+		</div>
 	)
 }
 
