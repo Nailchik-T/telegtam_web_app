@@ -19,13 +19,13 @@ const BasketCard = ({ product, countItems, removeFromBasket, addToCart }) => {
 				</div>
 				<div className='flex items-center gap-3'>
 					<p
-						onClick={() => removeFromBasket(product.id)}
+						onClick={() => removeFromBasket(product._id)}
 						className='text-primaryDep bg-secondary text-2xl w-8 h-9 rounded-lg text-center'
 					>
 						-
 					</p>
 					<p className='text-primary font-bold text-lg'>
-						{countItems(product.id)}
+						{countItems(product._id)}
 					</p>
 					<p
 						onClick={() => addToCart(product)}

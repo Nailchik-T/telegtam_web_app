@@ -14,7 +14,7 @@ const Basket = () => {
 	}, [])
 
 	const removeFromBasket = itemId => {
-		const indexToRemove = basketItems.findIndex(item => item.id === itemId)
+		const indexToRemove = basketItems.findIndex(item => item._id === itemId)
 		if (indexToRemove !== -1) {
 			const updatedBasketItems = [...basketItems]
 			updatedBasketItems.splice(indexToRemove, 1)
@@ -29,14 +29,14 @@ const Basket = () => {
 	}
 
 	const countItems = itemId => {
-		return basketItems.filter(item => item.id === itemId).length
+		return basketItems.filter(item => item._id === itemId).length
 	}
 
 	const uniqueBasketItems = Array.from(
-		new Set(basketItems.map(item => item.id))
+		new Set(basketItems.map(item => item._id))
 	).map(id => {
 		return {
-			...basketItems.find(item => item.id === id),
+			...basketItems.find(item => item._id === id),
 			count: countItems(id),
 		}
 	})
@@ -49,7 +49,7 @@ const Basket = () => {
 			<div className='flex flex-col gap-5 p-5'>
 				{uniqueBasketItems.map(product => (
 					<BasketCard
-						key={product.id}
+						key={product._id}
 						product={product}
 						countItems={countItems}
 						addToCart={addToCart}
