@@ -1,7 +1,7 @@
 import { MdFavorite } from 'react-icons/md'
 import icon from '../../assets/logo.png'
 
-const FavoriteCard = () => {
+const FavoriteCard = ({ product, removeFavorite }) => {
 	return (
 		<>
 			<div className='flex bg-white p-4 rounded-2xl justify-between'>
@@ -10,12 +10,17 @@ const FavoriteCard = () => {
 						<img className='max-w-full max-h-full' src={icon} alt='' />
 					</div>
 					<div>
-						<h2 className='text-lg font-bold'>Lorem</h2>
-						<p className='text-sm text-primary font-extralight'>75 500 ₸</p>
+						<h2 className='text-lg font-bold'>{product.name}</h2>
+						<p className='text-sm text-primary font-extralight'>
+							{product.price.toLocaleString()} ₸
+						</p>
 					</div>
 				</div>
 				<div className='inline-block bg-primary p-2 rounded-2xl h-10 '>
-					<MdFavorite className='text-2xl  text-white ' />
+					<MdFavorite
+						onClick={() => removeFavorite(product._id)}
+						className='text-2xl  text-white '
+					/>
 				</div>
 			</div>
 		</>

@@ -12,6 +12,7 @@ const Header = () => {
 	const handleClick = () => {
 		isActive ? navigate('/catalog') : onClose()
 	}
+
 	return (
 		<div className={'header'}>
 			<FaChevronLeft
