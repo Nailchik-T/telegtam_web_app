@@ -12,7 +12,7 @@ export const Catalog = () => {
 		const fetchProducts = async () => {
 			try {
 				const response = await axios.get(
-					'http://192.168.1.104:5000/api/products'
+					'https://347b-2-135-16-83.ngrok-free.app/api/products/api/products'
 				)
 				setProducts(response.data)
 			} catch (err) {
