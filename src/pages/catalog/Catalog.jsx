@@ -11,9 +11,7 @@ export const Catalog = () => {
 	useEffect(() => {
 		const fetchProducts = async () => {
 			try {
-				const response = await axios.get(
-					'https://347b-2-135-16-83.ngrok-free.app/api/products/api/products'
-				)
+				const response = await axios.get('http://localhost:5000/api/products')
 				setProducts(response.data)
 			} catch (err) {
 				setError(err.message)
